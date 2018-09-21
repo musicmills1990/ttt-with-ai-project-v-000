@@ -47,7 +47,7 @@ def self.start
       puts "Would you like to play again?"
       play_again = gets.strip
       until play_again.downcase == "n" || play_again.downcase == "no"
-        game = Game.new
+        game = Game.new(player_1, player_2)
         until game.over?
         game.play
         end
