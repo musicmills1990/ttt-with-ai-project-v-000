@@ -16,7 +16,7 @@ module Players
           next_move(board) + 1
       end
     end
-    
+
     def next_move(board)
       win(board) || block(board) || corner(board) || dead_spot
     end
@@ -62,7 +62,10 @@ end
 
 
 
-
+#final update: weirdly the computer playing itself is drawing every time, but the logic against a person doesn't always hold up
+#(it's relatively easy to beat the computer, which means it's not always going for a block but rather going to random...maybe
+#check the block function at some point. Also, in no other place does it break, but if you go first and do 5, it goes 1, any other move is fine
+#but if you go 2 it breaks. Not sure why...
 
      #elsif board.turn_count == 2
       #  move = [1,3,7,9].detect{|cell| !board.taken?(cell)}.to_s
